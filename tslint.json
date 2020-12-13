@@ -1,0 +1,36 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended", "tslint-react"],
+    "rules": {
+        "max-classes-per-file": false,
+        "no-empty": false,
+        "no-trailing-whitespace": [true, "ignore-blank-lines"],
+        "no-console": false,
+        "jsx-boolean-value": false,
+        "forin": false,
+        "no-empty-interface": false,
+        "react/no-typos": false,
+        "ordered-imports": [true, {
+          "import-sources-order": "any",
+          "named-imports-order": "any",
+          "grouped-imports": true,
+          "groups": [
+            {
+              "name": "react",
+              "match": "^react",
+              "order": 1
+            },
+            {
+              "name": "relative",
+              "match": "^[.]",
+              "order": 3
+            },
+            {
+              "name": "node_modules",
+              "match": ".*",
+              "order": 2
+            }
+          ]
+        }]
+    }
+}
